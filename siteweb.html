@@ -1,0 +1,419 @@
+<!DOCTYPE html>
+<html lang="fr" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Controverse : Guerre et Technologies</title>
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- FontAwesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&family=Merriweather:ital,wght@0,300;0,700;1,300&display=swap" rel="stylesheet">
+    
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        polytech: '#005b96',
+                        war: '#2d3748',
+                        accent: '#e53e3e',
+                    },
+                    fontFamily: {
+                        sans: ['Inter', 'sans-serif'],
+                        serif: ['Merriweather', 'serif'],
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        .hero-bg {
+            background-image: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url('https://images.unsplash.com/photo-1588775224823-1490264102f6?ixlib=rb-1.2.1&auto=format&fit=crop&w=1950&q=80');
+            background-size: cover;
+            background-position: center;
+        }
+        .amue-paper {
+            background-color: #fdfbf7;
+            box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
+            border: 1px solid #e2e8f0;
+        }
+        
+        /* Frise Chronologique Responsive */
+        .timeline-line {
+            position: absolute;
+            background-color: #cbd5e0;
+            width: 4px;
+            height: 100%;
+            /* Par défaut (Mobile) : Ligne à gauche */
+            left: 1.5rem; 
+            transform: translateX(-50%);
+        }
+        
+        /* Version Desktop : Ligne au centre */
+        @media (min-width: 768px) {
+            .timeline-line {
+                left: 50%;
+            }
+        }
+    </style>
+</head>
+<body class="bg-gray-50 text-gray-800 font-sans">
+
+    <!-- Navigation -->
+    <nav class="bg-war text-white fixed w-full z-50 shadow-lg">
+        <div class="container mx-auto px-6 py-4 flex justify-between items-center">
+            <a href="#" class="text-xl font-bold font-serif tracking-wider z-50 relative">
+                <i class="fa-solid fa-shield-halved mr-2"></i>Controverse G3
+            </a>
+            
+            <!-- Desktop Menu -->
+            <div class="hidden md:flex space-x-6 text-sm uppercase tracking-wide">
+                <a href="#argumentation" class="hover:text-gray-300 transition">Argumentation</a>
+                <a href="#acteurs" class="hover:text-gray-300 transition">Acteurs</a>
+                <a href="#chronologie" class="hover:text-gray-300 transition">Chronologie</a>
+                <a href="#amue" class="hover:text-blue-300 transition font-bold">Article AMUE</a>
+                <a href="#bibliographie" class="hover:text-gray-300 transition">Bibliographie</a>
+                <a href="#equipe" class="hover:text-gray-300 transition">Équipe</a>
+            </div>
+
+            <!-- Mobile Menu Button -->
+            <button id="mobile-menu-btn" class="md:hidden text-2xl focus:outline-none z-50 relative">
+                <i class="fa-solid fa-bars"></i>
+            </button>
+        </div>
+
+        <!-- Mobile Menu Overlay (Hidden by default) -->
+        <div id="mobile-menu" class="fixed inset-0 bg-war bg-opacity-95 z-40 flex flex-col items-center justify-center space-y-8 text-xl hidden transition-opacity duration-300">
+            <a href="#argumentation" class="mobile-link hover:text-blue-300">Argumentation</a>
+            <a href="#acteurs" class="mobile-link hover:text-blue-300">Acteurs</a>
+            <a href="#chronologie" class="mobile-link hover:text-blue-300">Chronologie</a>
+            <a href="#amue" class="mobile-link text-blue-400 font-bold">Article AMUE</a>
+            <a href="#bibliographie" class="mobile-link hover:text-blue-300">Bibliographie</a>
+            <a href="#equipe" class="mobile-link hover:text-blue-300">Équipe</a>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <header class="hero-bg h-screen flex flex-col items-center justify-center text-center px-4 pt-20">
+        <!-- Logos Institutionnels -->
+        <div class="flex gap-6 mb-8 bg-white/90 p-4 rounded-lg shadow-lg">
+            <img src="https://www.umontpellier.fr/wp-content/uploads/2023/01/logo_um_2022_rouge_RVB-300x110.png" alt="Logo Université de Montpellier" class="h-12 md:h-16 w-auto">
+            <div class="w-px bg-gray-300 h-12 md:h-16"></div>
+            <img src="https://upload.wikimedia.org/wikipedia/commons/a/ac/Logo_polytech_montpellier.jpg" alt="Logo Polytech Montpellier" class="h-12 md:h-16 w-auto">
+        </div>
+
+        <div class="max-w-4xl text-white">
+            <h1 class="text-3xl md:text-6xl font-serif font-bold mb-6 leading-tight">Nouvelles technologies et défense</h1>
+            <p class="text-lg md:text-2xl mb-8 font-light px-2">Vers une guerre plus inhumaine ou une limitation des conflits ?</p>
+            <a href="#argumentation" class="bg-polytech hover:bg-blue-700 text-white font-bold py-3 px-6 md:px-8 rounded-full transition duration-300 shadow-lg border border-white/20 text-sm md:text-base">
+                Explorer la controverse
+            </a>
+        </div>
+    </header>
+
+    <!-- Section 1: Argumentation -->
+    <section id="argumentation" class="py-16 md:py-20 container mx-auto px-4 md:px-6">
+        <div class="text-center mb-12 md:mb-16">
+            <h2 class="text-2xl md:text-3xl font-bold text-war mb-4">L'Argumentation</h2>
+            <div class="w-24 h-1 bg-accent mx-auto"></div>
+            <p class="mt-4 text-gray-600 max-w-2xl mx-auto text-sm md:text-base">
+                Les progrès technologiques récents (IA, drones, cyberattaques) bouleversent la manière de mener la guerre. Cette évolution divise les experts en deux camps majeurs.
+            </p>
+        </div>
+
+        <div class="grid md:grid-cols-2 gap-8 md:gap-12">
+            <!-- Thèse -->
+            <div class="bg-white p-6 md:p-8 rounded-lg shadow-md border-l-4 border-blue-500">
+                <div class="flex items-center mb-6">
+                    <div class="bg-blue-100 p-3 rounded-full mr-4 flex-shrink-0">
+                        <i class="fa-solid fa-crosshairs text-blue-600 text-xl md:text-2xl"></i>
+                    </div>
+                    <h3 class="text-xl md:text-2xl font-bold text-gray-800">Vers une guerre "propre" ?</h3>
+                </div>
+                <p class="text-gray-600 mb-4 text-justify text-sm md:text-base">
+                    Pour certains partisans de la modernisation militaire, les technologies défensives permettent paradoxalement de <strong>limiter les pertes humaines</strong>. L'utilisation de drones permet un ciblage chirurgical, réduisant théoriquement les dommages collatéraux.
+                </p>
+                <p class="text-gray-600 mb-4 text-justify text-sm md:text-base">
+                    Les innovations ne sont pas qu'offensives. Comme le souligne <em>Benjamin Queyriaux</em>, la guerre en Ukraine a accéléré l'usage des drones médicaux pour le transport de sang et de médicaments.
+                </p>
+                <ul class="list-disc list-inside text-gray-600 mt-4 space-y-2 text-sm md:text-base">
+                    <li>Précision accrue des frappes.</li>
+                    <li>Épargne la vie des soldats.</li>
+                    <li>Surveillance préventive via l'IA.</li>
+                </ul>
+            </div>
+
+            <!-- Antithèse -->
+            <div class="bg-white p-6 md:p-8 rounded-lg shadow-md border-l-4 border-red-500">
+                <div class="flex items-center mb-6">
+                    <div class="bg-red-100 p-3 rounded-full mr-4 flex-shrink-0">
+                        <i class="fa-solid fa-robot text-red-600 text-xl md:text-2xl"></i>
+                    </div>
+                    <h3 class="text-xl md:text-2xl font-bold text-gray-800">La déshumanisation</h3>
+                </div>
+                <p class="text-gray-600 mb-4 text-justify text-sm md:text-base">
+                    À l'opposé, l'usage croissant d'armes autonomes (SALA) soulève de graves questions éthiques. La distance créée par l'écran risque de <strong>banaliser l'acte d'ôter la vie</strong> (effet "jeu vidéo").
+                </p>
+                <p class="text-gray-600 mb-4 text-justify text-sm md:text-base">
+                    L'exemple de l'IA "Lavender" à Gaza montre les dérives possibles d'une automatisation du ciblage. Qui est responsable en cas d'erreur algorithmique ?
+                </p>
+                <ul class="list-disc list-inside text-gray-600 mt-4 space-y-2 text-sm md:text-base">
+                    <li>Absence d'empathie humaine.</li>
+                    <li>Flou juridique (responsabilité).</li>
+                    <li>Risque de piratage massif.</li>
+                </ul>
+            </div>
+        </div>
+    </section>
+
+    <!-- Section 2: Acteurs -->
+    <section id="acteurs" class="py-16 md:py-20 bg-gray-100">
+        <div class="container mx-auto px-4 md:px-6">
+            <h2 class="text-2xl md:text-3xl font-bold text-war mb-12 text-center">Cartographie des Acteurs</h2>
+            
+            <div class="grid sm:grid-cols-2 lg:grid-cols-4 gap-6">
+                <!-- Expert 1 -->
+                <div class="bg-white p-6 rounded-lg shadow hover:shadow-xl transition duration-300 flex flex-col items-center">
+                    <div class="h-16 w-16 md:h-20 md:w-20 bg-gray-200 rounded-full mb-4 flex items-center justify-center text-2xl text-gray-500">
+                        <i class="fa-solid fa-user-graduate"></i>
+                    </div>
+                    <h4 class="text-lg font-bold text-center">Anna Konert</h4>
+                    <p class="text-xs text-center text-blue-600 uppercase font-semibold mb-2">Juridique</p>
+                    <p class="text-xs md:text-sm text-gray-600 text-center">
+                        Directrice de l'institut du droit de l'Air (Pologne). Experte sur le cadre légal des drones autonomes.
+                    </p>
+                </div>
+
+                <!-- Expert 2 -->
+                <div class="bg-white p-6 rounded-lg shadow hover:shadow-xl transition duration-300 flex flex-col items-center">
+                    <div class="h-16 w-16 md:h-20 md:w-20 bg-gray-200 rounded-full mb-4 flex items-center justify-center text-2xl text-gray-500">
+                        <i class="fa-solid fa-user-shield"></i>
+                    </div>
+                    <h4 class="text-lg font-bold text-center">Patrick Bezombes</h4>
+                    <p class="text-xs text-center text-green-600 uppercase font-semibold mb-2">Militaire</p>
+                    <p class="text-xs md:text-sm text-gray-600 text-center">
+                        Ingénieur Général de l'Armement. Travaille sur le "Human in the loop".
+                    </p>
+                </div>
+
+                <!-- Expert 3 -->
+                <div class="bg-white p-6 rounded-lg shadow hover:shadow-xl transition duration-300 flex flex-col items-center">
+                    <div class="h-16 w-16 md:h-20 md:w-20 bg-gray-200 rounded-full mb-4 flex items-center justify-center text-2xl text-gray-500">
+                        <i class="fa-solid fa-user-doctor"></i>
+                    </div>
+                    <h4 class="text-lg font-bold text-center">Benjamin Queyriaux</h4>
+                    <p class="text-xs text-center text-red-600 uppercase font-semibold mb-2">Médecine</p>
+                    <p class="text-xs md:text-sm text-gray-600 text-center">
+                        Expert en médecine de catastrophe. Innovation médicale via les drones en Ukraine.
+                    </p>
+                </div>
+
+                <!-- Expert 4 -->
+                <div class="bg-white p-6 rounded-lg shadow hover:shadow-xl transition duration-300 flex flex-col items-center">
+                    <div class="h-16 w-16 md:h-20 md:w-20 bg-gray-200 rounded-full mb-4 flex items-center justify-center text-2xl text-gray-500">
+                        <i class="fa-solid fa-newspaper"></i>
+                    </div>
+                    <h4 class="text-lg font-bold text-center">Vilaine Laurent</h4>
+                    <p class="text-xs text-center text-purple-600 uppercase font-semibold mb-2">Éthique</p>
+                    <p class="text-xs md:text-sm text-gray-600 text-center">
+                        Auteur sur les "Robots tueurs". Soldat ou Algorithme, qui décide ?
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Section 3: Chronologie -->
+    <section id="chronologie" class="py-16 md:py-20 container mx-auto px-4 overflow-hidden">
+        <h2 class="text-2xl md:text-3xl font-bold text-war mb-12 text-center">Chronologie de la "Robotisation"</h2>
+        
+        <div class="relative max-w-4xl mx-auto">
+            <div class="timeline-line"></div>
+            
+            <!-- Event 1 (Desktop: Right) -->
+            <div class="mb-8 flex flex-row md:justify-between items-center w-full">
+                <div class="order-1 w-5/12 hidden md:block"></div> <!-- Spacer Desktop -->
+                <div class="z-20 flex items-center order-1 bg-gray-800 shadow-xl w-8 h-8 rounded-full absolute left-4 md:relative md:left-auto md:mx-auto justify-center">
+                    <h1 class="font-semibold text-sm md:text-lg text-white">1</h1>
+                </div>
+                <div class="order-1 bg-gray-100 rounded-lg shadow-xl w-full md:w-5/12 px-6 py-4 ml-12 md:ml-0">
+                    <h3 class="mb-2 font-bold text-gray-800 text-lg md:text-xl">2013</h3>
+                    <p class="text-sm leading-snug tracking-wide text-gray-900">
+                        Rapports majeurs de l'ONU sur les dangers des <strong>SALA</strong> (Systèmes d'Armes Létaux Autonomes).
+                    </p>
+                </div>
+            </div>
+
+            <!-- Event 2 (Desktop: Left) -->
+            <div class="mb-8 flex flex-row md:flex-row-reverse md:justify-between items-center w-full">
+                <div class="order-1 w-5/12 hidden md:block"></div> <!-- Spacer Desktop -->
+                <div class="z-20 flex items-center order-1 bg-blue-600 shadow-xl w-8 h-8 rounded-full absolute left-4 md:relative md:left-auto md:mx-auto justify-center">
+                    <h1 class="text-white font-semibold text-sm md:text-lg">2</h1>
+                </div>
+                <div class="order-1 bg-blue-50 rounded-lg shadow-xl w-full md:w-5/12 px-6 py-4 ml-12 md:mr-0 md:ml-0">
+                    <h3 class="mb-2 font-bold text-gray-800 text-lg md:text-xl">2020 (Libye)</h3>
+                    <p class="text-sm leading-snug tracking-wide text-gray-900">
+                        Drone <strong>Kargu-2</strong> suspecté d'avoir attaqué de manière autonome en Libye.
+                    </p>
+                </div>
+            </div>
+
+            <!-- Event 3 (Desktop: Right) -->
+            <div class="mb-8 flex flex-row md:justify-between items-center w-full">
+                <div class="order-1 w-5/12 hidden md:block"></div> <!-- Spacer Desktop -->
+                <div class="z-20 flex items-center order-1 bg-red-600 shadow-xl w-8 h-8 rounded-full absolute left-4 md:relative md:left-auto md:mx-auto justify-center">
+                    <h1 class="font-semibold text-sm md:text-lg text-white">3</h1>
+                </div>
+                <div class="order-1 bg-red-50 rounded-lg shadow-xl w-full md:w-5/12 px-6 py-4 ml-12 md:ml-0">
+                    <h3 class="mb-2 font-bold text-gray-800 text-lg md:text-xl">2022+ (Ukraine)</h3>
+                    <p class="text-sm leading-snug tracking-wide text-gray-900">
+                        "Guerre des drones" : usage massif de drones civils et suicides (Shahed).
+                    </p>
+                </div>
+            </div>
+
+            <!-- Event 4 (Desktop: Left) -->
+            <div class="mb-8 flex flex-row md:flex-row-reverse md:justify-between items-center w-full">
+                <div class="order-1 w-5/12 hidden md:block"></div> <!-- Spacer Desktop -->
+                <div class="z-20 flex items-center order-1 bg-gray-800 shadow-xl w-8 h-8 rounded-full absolute left-4 md:relative md:left-auto md:mx-auto justify-center">
+                    <h1 class="text-white font-semibold text-sm md:text-lg">4</h1>
+                </div>
+                <div class="order-1 bg-gray-100 rounded-lg shadow-xl w-full md:w-5/12 px-6 py-4 ml-12 md:mr-0 md:ml-0">
+                    <h3 class="mb-2 font-bold text-gray-800 text-lg md:text-xl">2024-25 (Gaza)</h3>
+                    <p class="text-sm leading-snug tracking-wide text-gray-900">
+                        Scandale <strong>"Lavender"</strong> : l'IA générant des milliers de cibles militaires avec peu de contrôle.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Section 4: Article AMUE -->
+    <section id="amue" class="py-16 md:py-20 bg-slate-200">
+        <div class="container mx-auto px-4 max-w-5xl">
+            <div class="mb-8 flex flex-col md:flex-row md:items-center justify-between gap-4">
+                <h2 class="text-2xl md:text-3xl font-bold text-war">Article AMUE</h2>
+                <span class="bg-polytech text-white px-4 py-1 rounded text-sm w-max">Livrable AMUE</span>
+            </div>
+
+            <div class="amue-paper p-6 md:p-12 relative">
+                <!-- Header Article -->
+                <div class="border-b-2 border-gray-300 pb-6 mb-8">
+                    <h1 class="text-2xl md:text-4xl font-serif font-bold text-gray-900 mb-2">Guerre 4.0 : L'Humanité face à l'Automatisation</h1>
+                    <p class="text-sm text-gray-500 italic mt-2">Thématiques : Accessibilité numérique et Interopérabilité</p>
+                </div>
+
+                <div class="mb-6 text-sm text-gray-600 bg-gray-50 p-4 rounded border border-gray-200">
+                    <strong>Auteurs (Groupe 3) :</strong><br>
+                    Antoine ARGAILLOT, Kalys DELIPERI, Basma-Elhabiba HAMDOUNE, Imade MOURI, Thibaut SCOTO DI SUOCCIO.
+                </div>
+
+                <div class="grid md:grid-cols-3 gap-8">
+                    <div class="md:col-span-2 text-justify text-gray-800 leading-relaxed font-serif text-sm md:text-base">
+                        <p class="mb-4">
+                            L'image du soldat dans sa tranchée est-elle en train de s'effacer au profit de l'opérateur derrière son écran ? La guerre moderne vit une mutation sans précédent. L'intégration massive de l'Intelligence Artificielle (IA) redéfinit la tactique militaire et interroge notre éthique.
+                        </p>
+                        
+                        <h3 class="text-lg font-bold text-polytech mt-6 mb-3">Sauver des vies ?</h3>
+                        <p class="mb-4">
+                            L'argumentaire en faveur de cette "guerre technologique" repose sur une promesse de protection. Comme l'analyse Benjamin Queyriaux, la guerre en Ukraine a stimulé l'innovation vitale. Les <strong>drones-cargos</strong> transportent désormais sang et médicaments vers des zones inaccessibles. Offensivement, la précision chirurgicale permettrait de réduire les dommages collatéraux.
+                        </p>
+
+                        <h3 class="text-lg font-bold text-polytech mt-6 mb-3">La Dilution de la Responsabilité</h3>
+                        <p class="mb-4">
+                            Cependant, l'enquête sur le système "Lavender" à Gaza a révélé les risques d'une "bureaucratie de la mort" automatisée. Vilaine Laurent pose la question : qui décide de la mort ? Si un drone autonome fait une erreur, qui est responsable ? Cette distance émotionnelle (la "guerre PlayStation") risque de désinhiber le recours à la force.
+                        </p>
+
+                        <h3 class="text-lg font-bold text-polytech mt-6 mb-3">Conclusion</h3>
+                        <p>
+                            La technologie est un "pharmakon". Elle ne doit pas conduire à une démission de la conscience humaine. Il est impératif d'établir des garde-fous internationaux pour que la décision létale reste sous contrôle humain significatif.
+                        </p>
+                    </div>
+
+                    <!-- Sidebar -->
+                    <div class="md:col-span-1">
+                        <div class="bg-gray-100 p-4 md:p-6 rounded mb-6 border-l-4 border-polytech">
+                            <h4 class="font-bold text-gray-900 mb-2 uppercase text-xs md:text-sm">Zoom : Drones Médicaux</h4>
+                            <p class="text-xs md:text-sm text-gray-600 mb-4">
+                                Les drones-ambulances, bien qu'expérimentaux, pourraient bientôt réaliser des gestes de premiers secours autonomes.
+                            </p>
+                            <img src="https://images.unsplash.com/photo-1473968512647-3e447244af8f?ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60" alt="Drone" class="w-full h-32 object-cover rounded mb-2">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Section 5: Bibliographie -->
+    <section id="bibliographie" class="py-16 md:py-20 bg-white container mx-auto px-4 md:px-6">
+        <h2 class="text-2xl md:text-3xl font-bold text-war mb-8">Bibliographie</h2>
+        <div class="grid md:grid-cols-2 gap-8">
+            <div>
+                <h3 class="text-lg font-semibold mb-4 border-b pb-2">Académique</h3>
+                <ul class="text-xs md:text-sm text-gray-600 space-y-3">
+                    <li><i class="fa-solid fa-book mr-2 text-polytech"></i> <strong>Bezombes, P. 2018.</strong> « Autonomie et respect de la Règle... ». <em>Revue Défense Nationale</em>.</li>
+                    <li><i class="fa-solid fa-book mr-2 text-polytech"></i> <strong>Konert, A. 2021.</strong> « Military autonomous drones... ». <em>Transp. Research Proc.</em>.</li>
+                    <li><i class="fa-solid fa-book mr-2 text-polytech"></i> <strong>Queyriaux, B. 2024.</strong> « La guerre source d’innovations... ». <em>Médecine de Catastrophe</em>.</li>
+                </ul>
+            </div>
+            <div>
+                <h3 class="text-lg font-semibold mb-4 border-b pb-2">Webographie</h3>
+                <ul class="text-xs md:text-sm text-gray-600 space-y-3">
+                    <li><i class="fa-solid fa-link mr-2 text-polytech"></i> <strong>Abraham, Y. 2024.</strong> « Lavender, l’IA qui dirige les bombardements... ». <em>L’Humanité</em>.</li>
+                </ul>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-gray-900 text-gray-400 py-12">
+        <div class="container mx-auto px-6 text-center">
+            <!-- Logos Footer -->
+            <div class="flex justify-center gap-8 mb-8 grayscale hover:grayscale-0 transition opacity-70 hover:opacity-100">
+                <img src="https://www.umontpellier.fr/wp-content/uploads/2023/01/logo_um_2022_rouge_RVB-300x110.png" alt="Logo UM" class="h-12 w-auto bg-white p-1 rounded">
+                <img src="https://upload.wikimedia.org/wikipedia/commons/a/ac/Logo_polytech_montpellier.jpg" alt="Logo Polytech" class="h-12 w-auto bg-white p-1 rounded">
+            </div>
+
+            <div class="max-w-4xl mx-auto border-t border-gray-700 pt-8">
+                <p class="text-xs md:text-sm italic mb-4 text-justify md:text-center">
+                    « Le site web suivant est un exercice réalisé par des élèves de 3ème année de l'école Polytech Montpellier dans le cadre du cours d'introduction au système d'information du département IG. Ces sites sont le résultat de travail d'étudiants et sont mis en ligne pour des raisons pédagogiques et didactiques; une fois en ligne, ils ne sont plus mis à jour. Vos réactions et commentaires sont très bienvenus. Pour signaler une erreur, réagir à un contenu ou demander une modification, merci d'écrire aux élèves et à la responsable de l'enseignement (isabelle.bourdon@umontpellier.fr). Polytech Montpellier décline toute responsabilité pour les erreurs et les imprécisions que peuvent contenir ces sites ».
+                </p>
+                <div class="mt-4 text-sm">
+                    <p>&copy; 2025 - 2026 - Polytech Montpellier - DaMS3</p>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Scripts -->
+    <script>
+        // Smooth Scroll
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                const targetId = this.getAttribute('href');
+                const targetSection = document.querySelector(targetId);
+                if (targetSection) {
+                    targetSection.scrollIntoView({ behavior: 'smooth' });
+                }
+                // Close mobile menu if open
+                const mobileMenu = document.getElementById('mobile-menu');
+                if (!mobileMenu.classList.contains('hidden')) {
+                    mobileMenu.classList.add('hidden');
+                }
+            });
+        });
+
+        // Mobile Menu Toggle Logic
+        const btn = document.getElementById('mobile-menu-btn');
+        const menu = document.getElementById('mobile-menu');
+
+        btn.addEventListener('click', () => {
+            menu.classList.toggle('hidden');
+        });
+    </script>
+</body>
+</html>
