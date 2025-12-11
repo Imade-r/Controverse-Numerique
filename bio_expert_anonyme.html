@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Entretien Exclusif - Expert Anonyme</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&family=Merriweather:ital,wght@0,300;0,700;1,300&display=swap" rel="stylesheet">
+    
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: { polytech: '#005b96', war: '#2d3748', accent: '#e53e3e', secret: '#4a5568' },
+                    fontFamily: { sans: ['Inter', 'sans-serif'], serif: ['Merriweather', 'serif'] }
+                }
+            }
+        }
+    </script>
+</head>
+<body class="bg-gray-50 text-gray-800 font-sans">
+
+    <nav class="bg-war text-white fixed w-full z-50 shadow-lg">
+        <div class="container mx-auto px-6 py-4">
+            <a href="siteweb.html#acteurs" class="text-xl font-bold font-serif tracking-wider hover:text-gray-400 transition flex items-center">
+                <i class="fa-solid fa-arrow-left mr-2"></i>Retour à la Cartographie
+            </a>
+        </div>
+    </nav>
+
+    <header class="bg-white pt-32 pb-12 shadow-sm border-b border-gray-200">
+        <div class="container mx-auto px-6 flex flex-col md:flex-row items-center gap-8">
+            <div class="w-32 h-32 bg-gray-200 rounded-full flex items-center justify-center text-5xl text-secret shadow-inner border-4 border-white ring-2 ring-gray-400">
+                <i class="fa-solid fa-user-secret"></i>
+            </div>
+            
+            <div class="text-center md:text-left">
+                <h1 class="text-4xl font-serif font-bold text-gray-900 mb-2">Expert Anonyme</h1>
+                <span class="bg-gray-200 text-gray-800 px-3 py-1 rounded-full text-xs font-bold uppercase tracking-wide">Médecine de Guerre & OTAN</span>
+                <p class="mt-4 text-gray-600 max-w-2xl text-lg leading-relaxed">
+                    Ancien médecin militaire et consultant international (28 ans de service). Il nous livre une analyse de terrain sur la réalité technologique en Ukraine, loin des fantasmes.
+                </p>
+            </div>
+        </div>
+    </header>
+
+    <main class="container mx-auto px-6 py-12 max-w-4xl">
+        
+        <section class="mb-12">
+            <h2 class="text-2xl font-bold text-war mb-6 flex items-center">
+                <span class="bg-secret w-2 h-8 mr-3 rounded-sm"></span> Contexte de l'entretien
+            </h2>
+            <div class="bg-white p-8 rounded-lg shadow-sm text-justify leading-relaxed text-gray-700">
+                <p class="mb-4">
+                    Cet entretien a été réalisé par le groupe avec un expert spécialisé en santé publique et épidémiologie, ayant servi comme conseiller médical à l'OTAN.
+                </p>
+                <p class="bg-gray-100 p-4 rounded border-l-4 border-gray-500 italic text-sm">
+                    <strong>Note :</strong> L'échange porte sur l'évolution radicale de la doctrine médicale militaire forcée par le conflit en Ukraine, passant de la supériorité aérienne à la nécessité de drones terrestres face au brouillage électronique.
+                </p>
+            </div>
+        </section>
+
+        <section class="mb-12">
+            <h2 class="text-2xl font-bold text-war mb-6 flex items-center">
+                <span class="bg-accent w-2 h-8 mr-3 rounded-sm"></span> Morceaux Choisis
+            </h2>
+            
+            <div class="grid gap-8">
+                <div class="bg-white p-8 rounded-lg shadow-lg border-t-4 border-gray-600 relative">
+                    <i class="fa-solid fa-quote-left text-4xl text-gray-200 absolute top-4 left-4"></i>
+                    <blockquote class="relative z-10 pl-8">
+                        <p class="text-lg font-serif text-gray-800 italic mb-4">
+                            "L'Ukraine a tout changé : il n'y a plus de supériorité aérienne. Les hélicoptères ne volent plus [...] On est à l'étape où ce n'est plus possible à cause du brouillage et de la guerre électronique."
+                        </p>
+                        <footer class="text-xs font-bold text-gray-500 uppercase">— Sur la fin des drones aériens</footer>
+                    </blockquote>
+                </div>
+
+                <div class="bg-white p-8 rounded-lg shadow-lg border-t-4 border-gray-600 relative">
+                    <i class="fa-solid fa-quote-left text-4xl text-gray-200 absolute top-4 left-4"></i>
+                    <blockquote class="relative z-10 pl-8">
+                        <p class="text-lg font-serif text-gray-800 italic mb-4">
+                            "La science-fiction d'aujourd'hui sera peut-être la réalité de demain, mais en médecine, on n'effacera jamais le médecin avec son stéthoscope."
+                        </p>
+                        <footer class="text-xs font-bold text-gray-500 uppercase">— Sur la place de l'humain</footer>
+                    </blockquote>
+                </div>
+            </div>
+        </section>
+
+        <section class="mb-12">
+            <h2 class="text-2xl font-bold text-war mb-6 flex items-center">
+                <span class="bg-polytech w-2 h-8 mr-3 rounded-sm"></span> Analyse du groupe
+            </h2>
+            <div class="bg-white p-8 rounded-lg shadow-sm border border-gray-200">
+                <h3 class="font-bold text-lg mb-4">Ce que cet entretien nous apprend :</h3>
+                <ul class="list-disc list-inside text-gray-700 space-y-3">
+                    <li>
+                        <strong>Rupture de doctrine :</strong> Le passage de la "Golden Hour" (évacuation en 1h) au "Prolonged Field Care" (soins prolongés sur le terrain) faute d'évacuation possible.
+                    </li>
+                    <li>
+                        <strong>Innovation par contrainte :</strong> L'émergence forcée des <em>drones terrestres</em> pour l'évacuation des blessés (ex: une évacuation de 36h sur 20km) car les airs sont saturés ou brouillés.
+                    </li>
+                    <li>
+                        <strong>Double usage :</strong> Les drones initialement prévus pour tuer ou observer sont bricolés pour transporter du sang réfrigéré ou chercher des victimes par infrarouge.
+                    </li>
+                </ul>
+            </div>
+        </section>
+
+        <section>
+            <h2 class="text-2xl font-bold text-war mb-6 flex items-center">
+                <span class="bg-gray-400 w-2 h-8 mr-3 rounded-sm"></span> Source
+            </h2>
+            <div class="bg-gray-100 p-6 rounded-lg border border-gray-200">
+                <ul class="space-y-4 text-sm text-gray-700">
+                    <li class="bg-white p-3 rounded shadow-sm flex items-center">
+                        <i class="fa-solid fa-microphone-lines text-2xl text-gray-500 mr-4"></i>
+                        <div>
+                            <strong class="block text-gray-900 mb-1">Transcription de l'entretien : Drones et Médecine de Guerre</strong>
+                            <p class="font-mono text-xs text-gray-500 mb-1">Fichier source : Transcription.docx</p>
+                            <p class="italic text-gray-600 text-xs">
+                                Participants : M. Queyriaux (Expert), Thibaut & Antoine (Polytech Montpellier).
+                            </p>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+        </section>
+
+    </main>
+    
+    <footer class="bg-gray-900 text-gray-400 py-8 mt-12">
+        <div class="container mx-auto px-6 text-center">
+            <p class="text-sm mb-2">&copy; 2025 - Polytech Montpellier - DaMS3</p>
+            <p class="text-xs text-gray-500">Page réalisée par le groupe 3.</p>
+        </div>
+    </footer>
+</body>
+</html>
