@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Biographie - Anna Konert</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&family=Merriweather:ital,wght@0,300;0,700;1,300&display=swap" rel="stylesheet">
+    
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        polytech: '#005b96',
+                        war: '#2d3748',
+                        accent: '#e53e3e',
+                    },
+                    fontFamily: {
+                        sans: ['Inter', 'sans-serif'],
+                        serif: ['Merriweather', 'serif'],
+                    }
+                }
+            }
+        }
+    </script>
+</head>
+<body class="bg-gray-50 text-gray-800 font-sans">
+
+    <nav class="bg-war text-white fixed w-full z-50 shadow-lg">
+        <div class="container mx-auto px-6 py-4">
+            <a href="siteweb.html#acteurs" class="text-xl font-bold font-serif tracking-wider hover:text-blue-300 transition flex items-center">
+                <i class="fa-solid fa-arrow-left mr-2"></i>Retour à la Cartographie
+            </a>
+        </div>
+    </nav>
+
+    <header class="bg-white pt-32 pb-12 shadow-sm border-b border-gray-200">
+        <div class="container mx-auto px-6 flex flex-col md:flex-row items-center gap-8">
+            <div class="w-32 h-32 bg-blue-50 rounded-full flex items-center justify-center text-5xl text-polytech shadow-inner border-4 border-white ring-2 ring-blue-100">
+                <i class="fa-solid fa-gavel"></i>
+            </div>
+            
+            <div class="text-center md:text-left">
+                <h1 class="text-4xl font-serif font-bold text-gray-900 mb-2">Anna KONERT</h1>
+                <span class="bg-blue-100 text-blue-800 px-3 py-1 rounded-full text-xs font-bold uppercase tracking-wide">Droit Aérien & Spatial</span>
+                <p class="mt-4 text-gray-600 max-w-2xl text-lg leading-relaxed">
+                    Doyenne de la Faculté de Droit et d'Aviation (Université Lazarski). Elle analyse le vide juridique entourant l'usage des drones autonomes dans l'espace aérien.
+                </p>
+            </div>
+        </div>
+    </header>
+
+    <main class="container mx-auto px-6 py-12 max-w-4xl">
+        
+        <section class="mb-12">
+            <h2 class="text-2xl font-bold text-war mb-6 flex items-center">
+                <span class="bg-polytech w-2 h-8 mr-3 rounded-sm"></span> Parcours & Expertise
+            </h2>
+            <div class="bg-white p-8 rounded-lg shadow-sm text-justify leading-relaxed text-gray-700">
+                <p class="mb-4">
+                    Anna Konert est Professeure de droit et Directrice de l'Institut de Droit Aérien et Spatial à l'Université Lazarski de Varsovie. Membre active de plusieurs comités internationaux sur l'aviation, elle est une référence européenne sur la réglementation des systèmes sans pilote (UAS).
+                </p>
+                <p>
+                    Ses recherches se concentrent sur la responsabilité civile et pénale liée à l'utilisation de l'intelligence artificielle dans l'aviation. Elle explore comment le droit international (notamment la Convention de Chicago) peut s'adapter à des aéronefs dépourvus de pilote humain à bord.
+                </p>
+            </div>
+        </section>
+
+        <section class="mb-12">
+            <h2 class="text-2xl font-bold text-war mb-6 flex items-center">
+                <span class="bg-accent w-2 h-8 mr-3 rounded-sm"></span> Position dans la Controverse
+            </h2>
+            
+            <div class="bg-white p-8 rounded-lg shadow-lg border-t-4 border-accent relative overflow-hidden">
+                <div class="absolute top-0 right-0 p-4 opacity-10">
+                    <i class="fa-solid fa-scale-unbalanced text-6xl"></i>
+                </div>
+
+                <div class="flex flex-col gap-6">
+                    <div>
+                        <h3 class="text-xl font-bold text-gray-900 mb-2">Le Défi Juridique</h3>
+                        <p class="text-gray-600 italic border-l-4 border-gray-300 pl-4 py-1 mb-4">
+                            "La technologie avance beaucoup plus vite que la loi. Nous sommes face à un vide juridique dangereux concernant la responsabilité des actes autonomes."
+                        </p>
+                        </div>
+
+                    <div class="grid md:grid-cols-2 gap-6 mt-4">
+                        <div class="bg-gray-50 p-4 rounded border border-gray-200">
+                            <h4 class="font-bold text-polytech mb-2"><i class="fa-solid fa-circle-exclamation mr-2"></i>Problème identifié</h4>
+                            <p class="text-sm text-gray-700">
+                                L'absence de cadre clair pour définir qui est responsable (le fabricant, le programmeur ou le commandant) si un drone autonome commet une erreur ou un crime de guerre.
+                            </p>
+                        </div>
+                        <div class="bg-gray-50 p-4 rounded border border-gray-200">
+                            <h4 class="font-bold text-green-600 mb-2"><i class="fa-solid fa-lightbulb mr-2"></i>Proposition</h4>
+                            <p class="text-sm text-gray-700">
+                                La création de nouvelles normes internationales (OACI, UE) spécifiques à l'IA, ne se contentant pas d'adapter les vieilles lois de l'aviation civile.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section>
+            <h2 class="text-2xl font-bold text-war mb-6 flex items-center">
+                <span class="bg-gray-400 w-2 h-8 mr-3 rounded-sm"></span> Sources & Publications
+            </h2>
+            <div class="bg-gray-100 p-6 rounded-lg border border-gray-200">
+                <ul class="space-y-3 text-sm text-gray-700">
+                    <li class="flex items-start">
+                        <i class="fa-solid fa-book mt-1 mr-2 text-polytech"></i>
+                        <span>
+                            <strong>Konert, A. (2021).</strong> <em>Military autonomous drones (UAVs) - from fantasy to reality. Legal and Ethical implications.</em> Transportation Research Procedia.
+                        </span>
+                    </li>
+                    <li class="flex items-start">
+                        <i class="fa-solid fa-book mt-1 mr-2 text-polytech"></i>
+                        <span>
+                            <strong>Konert, A. & al.</strong> <em>Legal and ethical aspects of rules for the operation of autonomous unmanned aircraft.</em>
+                        </span>
+                    </li>
+                </ul>
+            </div>
+        </section>
+
+    </main>
+
+    <footer class="bg-gray-900 text-gray-400 py-8 mt-12">
+        <div class="container mx-auto px-6 text-center">
+            <p class="text-sm mb-2">&copy; 2025 - Polytech Montpellier - DaMS3</p>
+            <p class="text-xs text-gray-500">Page réalisée dans le cadre de la controverse G3.</p>
+        </div>
+    </footer>
+
+</body>
+</html>
