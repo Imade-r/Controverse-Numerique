@@ -43,12 +43,10 @@
             background-color: #cbd5e0;
             width: 4px;
             height: 100%;
-            /* Par défaut (Mobile) : Ligne à gauche */
             left: 1.5rem; 
             transform: translateX(-50%);
         }
         
-        /* Version Desktop : Ligne au centre */
         @media (min-width: 768px) {
             .timeline-line {
                 left: 50%;
@@ -261,7 +259,7 @@
                         <div class="h-16 w-16 bg-gray-200 rounded-full mb-4 flex items-center justify-center text-2xl text-gray-500 group-hover:bg-purple-100 group-hover:text-purple-600 transition">
                             <i class="fa-solid fa-pen-nib"></i>
                         </div>
-                        <h4 class="text-lg font-bold text-center group-hover:text-purple-600 transition">Vilaine Laurent</h4>
+                        <h4 class="text-lg font-bold text-center group-hover:text-purple-600 transition">Laurent Vilaine</h4>
                         <p class="text-xs text-center text-purple-600 uppercase font-semibold mb-2">Philosophe</p>
                         <p class="text-xs text-gray-600 text-center">
                             Auteur critique. Il questionne la déresponsabilisation morale induite par la technologie.
@@ -375,7 +373,7 @@
 
                         <h3 class="text-lg font-bold text-polytech mt-6 mb-3">La Dilution de la Responsabilité</h3>
                         <p class="mb-4">
-                            Cependant, l'enquête sur le système "Lavender" à Gaza a révélé les risques d'une "bureaucratie de la mort" automatisée. Vilaine Laurent pose la question : qui décide de la mort ? Si un drone autonome fait une erreur, qui est responsable ? Cette distance émotionnelle (la "guerre PlayStation") risque de désinhiber le recours à la force.
+                            Cependant, l'enquête sur le système "Lavender" à Gaza a révélé les risques d'une "bureaucratie de la mort" automatisée. Laurent Vilaine pose la question : qui décide de la mort ? Si un drone autonome fait une erreur, qui est responsable ? Cette distance émotionnelle (la "guerre PlayStation") risque de désinhiber le recours à la force.
                         </p>
 
                         <h3 class="text-lg font-bold text-polytech mt-6 mb-3">Conclusion</h3>
@@ -399,22 +397,40 @@
     </section>
 
     <section id="bibliographie" class="py-16 md:py-20 bg-white container mx-auto px-4 md:px-6">
-        <h2 class="text-2xl md:text-3xl font-bold text-war mb-8">Bibliographie</h2>
-        <div class="grid md:grid-cols-2 gap-8">
-            <div>
-                <h3 class="text-lg font-semibold mb-4 border-b pb-2">Académique</h3>
-                <ul class="text-xs md:text-sm text-gray-600 space-y-3">
-                    <li><i class="fa-solid fa-book mr-2 text-polytech"></i> <strong>Bezombes, P. 2018.</strong> « Autonomie et respect de la Règle... ». <em>Revue Défense Nationale</em>.</li>
-                    <li><i class="fa-solid fa-book mr-2 text-polytech"></i> <strong>Konert, A. 2021.</strong> « Military autonomous drones... ». <em>Transp. Research Proc.</em>.</li>
-                    <li><i class="fa-solid fa-book mr-2 text-polytech"></i> <strong>Queyriaux, B. 2024.</strong> « La guerre source d’innovations... ». <em>Médecine de Catastrophe</em>.</li>
-                </ul>
-            </div>
-            <div>
-                <h3 class="text-lg font-semibold mb-4 border-b pb-2">Webographie</h3>
-                <ul class="text-xs md:text-sm text-gray-600 space-y-3">
-                    <li><i class="fa-solid fa-link mr-2 text-polytech"></i> <strong>Abraham, Y. 2024.</strong> « Lavender, l’IA qui dirige les bombardements... ». <em>L’Humanité</em>.</li>
-                </ul>
-            </div>
+        <h2 class="text-2xl md:text-3xl font-bold text-war mb-8 text-center">Bibliographie Complète</h2>
+        <div class="bg-gray-50 p-6 md:p-10 rounded-lg shadow-inner border border-gray-200">
+            <ul class="space-y-4 text-xs md:text-sm text-gray-700 font-serif leading-relaxed h-96 overflow-y-auto pr-4">
+                <li><strong>Abaffy, Luke. 2021.</strong> « New Regulations, Tech Aim To Prevent Drone-Based Attacks. » ENR: Engineering News-Record 286 (9): 70‑71.</li>
+                <li><strong>Abraham, Yuval. 2024.</strong> « Lavender, l’intelligence artificielle qui dirige les bombardements israéliens à Gaza ». L’Humanité. <a href="https://www.humanite.fr" class="text-blue-500 hover:underline">Lien</a></li>
+                <li><strong>Andersin, Emelie. 2025.</strong> « The Use of the ‘Lavender’ in Gaza and the Law of Targeting: Ai-Decision Support Systems and Facial Recognition Technology ». Journal of International Humanitarian Legal Studies. <a href="https://doi.org/10.1163/18781527-bja10119" class="text-blue-500 hover:underline">DOI</a></li>
+                <li><strong>As AI Evolves, Pressure Mounts to Regulate ‘Killer Robots’ | UN News. 2025.</strong> <a href="https://news.un.org/en/story/2025/06/1163891" class="text-blue-500 hover:underline">Lien</a></li>
+                <li><strong>Beaulieu, Anne. 2023.</strong> « Drone Soldiers: Can A.I. Cherish Human Life and Foster Peace? ». The Curious Leader. <a href="https://medium.com/thecuriousleader/drone-soldiers-can-a-i-cherish-human-life-and-foster-peace-d936892e3256" class="text-blue-500 hover:underline">Lien</a></li>
+                <li><strong>Bezombes, Patrick. 2018.</strong> « Autonomie et respect de la Règle pour les robots militaires: Considérations sémantiques et point de vue de la doctrine interarmées ». Revue Défense Nationale. <a href="https://doi.org/10.3917/rdna.hs04.0023" class="text-blue-500 hover:underline">DOI</a></li>
+                <li><strong>Bi, Zheyuan et al. 2022.</strong> « Analysis of UAV Typical War Cases and Combat Assessment Research ». IEEE International Conference on Unmanned Systems. <a href="https://doi.org/10.1109/ICUS55513.2022.9987226" class="text-blue-500 hover:underline">DOI</a></li>
+                <li><strong>Challier, Pierre. s. d.</strong> « ENTRETIEN. Avec le logiciel “Lavender”... ». La Dépêche. <a href="https://www.ladepeche.fr/2024/10/17/entretien-avec-le-logiciel-lavender-lintelligence-artificielle-permet-a-israel-de-detecter-les-cibles-en-temps-reel-12265347.php" class="text-blue-500 hover:underline">Lien</a></li>
+                <li><strong>Connor, Roger. 2017.</strong> « Reconsidering Drone Warfare ». Endeavour. <a href="https://doi.org/10.1016/j.endeavour.2017.03.002" class="text-blue-500 hover:underline">DOI</a></li>
+                <li><strong>Deniset, Christian. 2023.</strong> « Émergence et développement des drones militaires... ». Thèse, Paris 10. <a href="https://theses.fr/s379146" class="text-blue-500 hover:underline">Lien</a></li>
+                <li><strong>Fabre, Ludovic, et Yves Auffret. 2016.</strong> « Drones de combat et éthique de la guerre ». The Conversation.</li>
+                <li><strong>Gusterson, Hugh. 2024.</strong> « It’s All Lavender in Gaza ». Anthropology Today. <a href="https://doi.org/10.1111/1467-8322.12923" class="text-blue-500 hover:underline">DOI</a></li>
+                <li><strong>Hamdi, Slim. 2021.</strong> « Deep Learning Anomaly Detection for Drone-based Surveillance ». Thèse, Troyes. <a href="https://theses.fr/2021TROY0026" class="text-blue-500 hover:underline">Lien</a></li>
+                <li><strong>Jeangène Vilmer, J-B., et C. Fontaine. 2016.</strong> « Drones armés, drones de combat et « robots tueurs » ». The Conversation.</li>
+                <li><strong>Johnson, James. 2022.</strong> « The AI Commander Problem ». Journal of Military Ethics. <a href="https://doi.org/10.1080/15027570.2023.2175887" class="text-blue-500 hover:underline">DOI</a></li>
+                <li><strong>Karatsioli, Barbara. 2012.</strong> « Les drones : nouveau médium de guerre ? ». Multitudes. <a href="https://doi.org/10.3917/mult.051.0111" class="text-blue-500 hover:underline">DOI</a></li>
+                <li><strong>Konert, Anna. 2021.</strong> « Military autonomous drones (UAVs) - from fantasy to reality ». Transportation Research Procedia. <a href="https://doi.org/10.1016/j.trpro.2021.11.121" class="text-blue-500 hover:underline">DOI</a></li>
+                <li><strong>Kunertova, Dominika. 2023.</strong> « Drones have boots: Learning from Russia’s war in Ukraine ». Contemporary Security Policy. <a href="https://doi.org/10.1080/13523260.2023.2262792" class="text-blue-500 hover:underline">DOI</a></li>
+                <li><strong>Letort, Delphine. 2022.</strong> « Screening Drone Warfare ». Revue LISA. <a href="https://doi.org/10.4000/lisa.14015" class="text-blue-500 hover:underline">DOI</a></li>
+                <li><strong>Massaux, Alexandre. 2025.</strong> « Voici Comment Les Drones Modifient Les Manières de Faire La Guerre ». The Conversation.</li>
+                <li><strong>Mirza, M. N. et al. 2016.</strong> « Unmanned Aerial Vehicles: A Revolution in the Making ». South Asian Studies.</li>
+                <li><strong>Müller, Oliver. 2021.</strong> « An Eye Turned into a Weapon... ». Philosophy & Technology. <a href="https://doi.org/10.1007/s13347-020-00440-5" class="text-blue-500 hover:underline">DOI</a></li>
+                <li><strong>Nancy, Johnson et al. 2025.</strong> « Autonomous Weapons Systems and the Ethics of AI-Driven Warfare ».</li>
+                <li><strong>Queyriaux, Benjamin. 2024.</strong> « La guerre source d’innovations en médecine de catastrophe : les drones en Ukraine ». Médecine de Catastrophe. <a href="https://doi.org/10.1016/j.pxur.2024.04.002" class="text-blue-500 hover:underline">DOI</a></li>
+                <li><strong>Sartre, Patrice. 2013.</strong> « Drones de guerre ». Études. <a href="https://doi.org/10.3917/etu.4195.0439" class="text-blue-500 hover:underline">DOI</a></li>
+                <li><strong>Singh, Gurmit et al. 2025.</strong> « Forecasting the emergence... for defence sector ». Social Sciences & Humanities Open. <a href="https://doi.org/10.1016/j.ssaho.2025.101794" class="text-blue-500 hover:underline">DOI</a></li>
+                <li><strong>Vilaine, Laurent. s. d.</strong> « Drones et robots tueurs dans la guerre : soldat ou algorithme... ? ». The Conversation. <a href="https://theconversation.com/drones-et-robots-tueurs-dans-la-guerre-soldat-ou-algorithme-qui-decidera-de-la-vie-et-de-la-mort-demain-263836" class="text-blue-500 hover:underline">Lien</a></li>
+                <li><strong>Walsh, James I, et Marcus Schulzke.</strong> « The Ethics of Drone Strikes ». <a href="https://apps.dtic.mil/sti/tr/pdf/ADA621793.pdf" class="text-blue-500 hover:underline">PDF</a></li>
+                <li><strong>Yaacoub, Jean-Paul et al. 2020.</strong> « Security analysis of drones systems ». Internet of Things. <a href="https://doi.org/10.1016/j.iot.2020.100218" class="text-blue-500 hover:underline">DOI</a></li>
+                <li><strong>Yordanova, Katerina. 2025.</strong> « Artificial Intelligence and Armed Conflicts ». The Cambridge Handbook. <a href="https://doi.org/10.1017/9781009367783.024" class="text-blue-500 hover:underline">DOI</a></li>
+            </ul>
         </div>
     </section>
 
