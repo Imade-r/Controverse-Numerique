@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Biographie - Christian Deniset</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&family=Merriweather:ital,wght@0,300;0,700;1,300&display=swap" rel="stylesheet">
+    
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: { polytech: '#005b96', war: '#2d3748', accent: '#e53e3e', history: '#4c51bf' },
+                    fontFamily: { sans: ['Inter', 'sans-serif'], serif: ['Merriweather', 'serif'] }
+                }
+            }
+        }
+    </script>
+</head>
+<body class="bg-gray-50 text-gray-800 font-sans">
+
+    <nav class="bg-war text-white fixed w-full z-50 shadow-lg">
+        <div class="container mx-auto px-6 py-4">
+            <a href="siteweb.html#acteurs" class="text-xl font-bold font-serif tracking-wider hover:text-indigo-300 transition flex items-center">
+                <i class="fa-solid fa-arrow-left mr-2"></i>Retour à la Cartographie
+            </a>
+        </div>
+    </nav>
+
+    <header class="bg-white pt-32 pb-12 shadow-sm border-b border-gray-200">
+        <div class="container mx-auto px-6 flex flex-col md:flex-row items-center gap-8">
+            <div class="w-32 h-32 bg-indigo-50 rounded-full flex items-center justify-center text-5xl text-history shadow-inner border-4 border-white ring-2 ring-indigo-100">
+                <i class="fa-solid fa-landmark"></i>
+            </div>
+            
+            <div class="text-center md:text-left">
+                <h1 class="text-4xl font-serif font-bold text-gray-900 mb-2">Christian DENISET</h1>
+                <span class="bg-indigo-100 text-indigo-800 px-3 py-1 rounded-full text-xs font-bold uppercase tracking-wide">Histoire Contemporaine</span>
+                <p class="mt-4 text-gray-600 max-w-2xl text-lg leading-relaxed">
+                    Doctorant en histoire, il analyse l'émergence des drones militaires comme une rupture historique.
+                </p>
+            </div>
+        </div>
+    </header>
+
+    <main class="container mx-auto px-6 py-12 max-w-4xl">
+        
+        <section class="mb-12">
+            <h2 class="text-2xl font-bold text-war mb-6 flex items-center">
+                <span class="bg-history w-2 h-8 mr-3 rounded-sm"></span> Parcours
+            </h2>
+            <div class="bg-white p-8 rounded-lg shadow-sm text-justify leading-relaxed text-gray-700">
+                <p class="mb-4">
+                    Christian Deniset est doctorant en histoire contemporaine, associé à l’Université Paris Nanterre (laboratoire IDHE.S-Nanterre).
+                </p>
+                <p>
+                    Il est l'auteur d'une thèse en cours portant sur "l’émergence et le développement des drones militaires".
+                </p>
+            </div>
+        </section>
+
+        <section class="mb-12">
+            <h2 class="text-2xl font-bold text-war mb-6 flex items-center">
+                <span class="bg-accent w-2 h-8 mr-3 rounded-sm"></span> Position dans la Controverse
+            </h2>
+            
+            <div class="bg-white p-8 rounded-lg shadow-lg border-t-4 border-history relative overflow-hidden">
+                <div class="absolute top-0 right-0 p-4 opacity-10">
+                    <i class="fa-solid fa-clock-rotate-left text-6xl"></i>
+                </div>
+
+                <div class="flex flex-col gap-6">
+                    <div>
+                        <h3 class="text-xl font-bold text-gray-900 mb-2">Perspective Historique</h3>
+                        <p class="text-gray-600 italic border-l-4 border-gray-300 pl-4 py-1 mb-4">
+                            Il étudie la période 1990-2020 pour comprendre comment le drone s'est imposé comme "une nouvelle manière de faire la guerre".
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section>
+            <h2 class="text-2xl font-bold text-war mb-6 flex items-center">
+                <span class="bg-gray-400 w-2 h-8 mr-3 rounded-sm"></span> Sources utilisées
+            </h2>
+            <div class="bg-gray-100 p-6 rounded-lg border border-gray-200">
+                <ul class="space-y-4 text-sm text-gray-700">
+                    <li class="bg-white p-3 rounded shadow-sm">
+                        <strong class="block text-gray-900 mb-1">Thèse / Article</strong>
+                        <p class="italic">
+                            Deniset, Christian. 2023. « Émergence et développement des drones militaires. Une nouvelle manière de faire la guerre, années 1990-2020 ». Thèse en préparation, Paris 10.
+                        </p>
+                    </li>
+                    <li class="bg-white p-3 rounded shadow-sm">
+                        <strong class="block text-gray-900 mb-1">Liste d'experts (Groupe 3)</strong>
+                        <p>
+                            Christian DENISET : Doctorant en histoire contemporaine et auteur d’une thèse en cours sur l’émergence des drones militaires. Associé à l’Université Paris Nanterre (IDHE.S-Nanterre).
+                        </p>
+                    </li>
+                </ul>
+            </div>
+        </section>
+
+    </main>
+</body>
+</html>
