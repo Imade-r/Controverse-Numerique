@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Biographie - Xavier Tytelman</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&family=Merriweather:ital,wght@0,300;0,700;1,300&display=swap" rel="stylesheet">
+    
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: { polytech: '#005b96', war: '#2d3748', accent: '#e53e3e', sky: '#0ea5e9' },
+                    fontFamily: { sans: ['Inter', 'sans-serif'], serif: ['Merriweather', 'serif'] }
+                }
+            }
+        }
+    </script>
+</head>
+<body class="bg-gray-50 text-gray-800 font-sans">
+
+    <nav class="bg-war text-white fixed w-full z-50 shadow-lg">
+        <div class="container mx-auto px-6 py-4">
+            <a href="index.html#acteurs" class="text-xl font-bold font-serif tracking-wider hover:text-sky-300 transition flex items-center">
+                <i class="fa-solid fa-arrow-left mr-2"></i>Retour à la Cartographie
+            </a>
+        </div>
+    </nav>
+
+    <header class="bg-white pt-32 pb-12 shadow-sm border-b border-gray-200">
+        <div class="container mx-auto px-6 flex flex-col md:flex-row items-center gap-8">
+            <div class="w-32 h-32 bg-sky-50 rounded-full flex items-center justify-center text-5xl text-sky shadow-inner border-4 border-white ring-2 ring-sky-100">
+                <i class="fa-solid fa-plane"></i>
+            </div>
+            
+            <div class="text-center md:text-left">
+                <h1 class="text-4xl font-serif font-bold text-gray-900 mb-2">Xavier TYTELMAN</h1>
+                <span class="bg-sky-100 text-sky-800 px-3 py-1 rounded-full text-xs font-bold uppercase tracking-wide">Aéronautique & Défense</span>
+                <p class="mt-4 text-gray-600 max-w-2xl text-lg leading-relaxed">
+                    Consultant aéronautique et défense, Président de Aviation NXT France.
+                </p>
+            </div>
+        </div>
+    </header>
+
+    <main class="container mx-auto px-6 py-12 max-w-4xl">
+        
+        <section class="mb-12">
+            <h2 class="text-2xl font-bold text-war mb-6 flex items-center">
+                <span class="bg-sky w-2 h-8 mr-3 rounded-sm"></span> Parcours
+            </h2>
+            <div class="bg-white p-8 rounded-lg shadow-sm text-justify leading-relaxed text-gray-700">
+                <p class="mb-4">
+                    Xavier Tytelman est un expert reconnu dans le secteur de l'aéronautique et de la défense. Ancien aviateur militaire, il est aujourd'hui consultant et Président de Aviation NXT France, une structure de conseil pour les entreprises du secteur aérien.
+                </p>
+                <p>
+                    Il est également connu pour son travail de vulgarisation et d'analyse des conflits modernes, notamment via les réseaux sociaux et les médias traditionnels, où il décrypte l'utilisation des technologies militaires.
+                </p>
+            </div>
+        </section>
+
+        <section class="mb-12">
+            <h2 class="text-2xl font-bold text-war mb-6 flex items-center">
+                <span class="bg-accent w-2 h-8 mr-3 rounded-sm"></span> Position dans la Controverse
+            </h2>
+            
+            <div class="bg-white p-8 rounded-lg shadow-lg border-t-4 border-sky relative overflow-hidden">
+                <div class="absolute top-0 right-0 p-4 opacity-10">
+                    <i class="fa-solid fa-satellite-dish text-6xl"></i>
+                </div>
+
+                <div class="flex flex-col gap-6">
+                    <div>
+                        <h3 class="text-xl font-bold text-gray-900 mb-2">Analyse Technique et Stratégique</h3>
+                        <p class="text-gray-600 italic border-l-4 border-gray-300 pl-4 py-1 mb-4">
+                            Il apporte un éclairage technique sur les capacités réelles des drones et de l'IA, s'éloignant des fantasmes de science-fiction pour se concentrer sur l'efficacité opérationnelle.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section>
+            <h2 class="text-2xl font-bold text-war mb-6 flex items-center">
+                <span class="bg-gray-400 w-2 h-8 mr-3 rounded-sm"></span> Sources utilisées
+            </h2>
+            <div class="bg-gray-100 p-6 rounded-lg border border-gray-200">
+                <ul class="space-y-4 text-sm text-gray-700">
+                    <li class="bg-white p-3 rounded shadow-sm">
+                        <strong class="block text-gray-900 mb-1">Liste d'experts (Groupe 3)</strong>
+                        <p>
+                            Xavier TYTELMAN : Consultant aéronautique et défense. Président de Aviation NXT France (Conseil pour entreprises du secteur aérien).
+                        </p>
+                    </li>
+                </ul>
+            </div>
+        </section>
+
+    </main>
+
+    <footer class="bg-gray-900 text-gray-400 py-8 mt-12">
+        <div class="container mx-auto px-6 text-center">
+            <p class="text-sm mb-2">&copy; 2025 - Polytech Montpellier - DaMS3</p>
+        </div>
+    </footer>
+</body>
+</html>
